@@ -1,0 +1,13 @@
+version: '3'
+services:
+  tomcat:
+    build: .
+    ports:
+      - 8080:8080
+  database:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: 'root'
+      POSTGRES_USER: 'tasksdatabase'
